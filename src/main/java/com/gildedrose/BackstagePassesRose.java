@@ -11,19 +11,19 @@ public class BackstagePassesRose extends Rose {
     if (this.quality < 50) {
       this.quality = this.quality + 1;
     }
-    if (this.sell_in < 6) {
+    if (this.sellIn < 6) {
       if (this.quality < 50) {
         this.quality = this.quality + 1;
       }
     }
 
-    if (this.sell_in < 11) {
+    if (this.sellIn < 11) {
       if (this.quality < 50) {
         this.quality = this.quality + 1;
       }
     }
 
-    if (this.sell_in < 0) {
+    if (this.sellIn < 0) {
       this.quality = 0;
     }
   }

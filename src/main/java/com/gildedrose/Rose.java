@@ -4,31 +4,31 @@ public class Rose {
 
   public String name;
 
-  public int sell_in;
+  public int sellIn;
 
   public int quality;
 
-  public Rose(String name, int sell_in, int quality) {
+  public Rose(String name, int sellIn, int quality) {
     this.name = name;
-    this.sell_in = sell_in;
+    this.sellIn = sellIn;
     this.quality = quality;
   }
 
   public void updateQuality() {
     if (this.quality > 0) {
       this.quality = this.quality - 1;
-      if (this.sell_in < 0) {
+      if (this.sellIn < 0) {
         this.quality = this.quality - 1;
       }
     }
   }
 
   public void updateSellIn() {
-    this.sell_in--;
+    this.sellIn--;
   }
 
   @Override
   public String toString() {
-    return this.name + ", " + this.sell_in + ", " + this.quality;
+    return this.name + ", " + this.sellIn + ", " + this.quality;
   }
 }

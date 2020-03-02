@@ -95,7 +95,7 @@ public class GildedRoseTest {
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
     assertEquals("rose", gildedRose.roses.get(0).name);
-    assertThat(gildedRose.roses.get(0).sell_in, is(3));
+    assertThat(gildedRose.roses.get(0).sellIn, is(3));
   }
 
   @Test
@@ -103,7 +103,7 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 4, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertThat(gildedRose.roses.get(0).sell_in, is(3));
+    assertThat(gildedRose.roses.get(0).sellIn, is(3));
   }
 
   @Test
@@ -112,7 +112,7 @@ public class GildedRoseTest {
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
     assertEquals("Aged Brie", gildedRose.roses.get(0).name);
-    assertThat(gildedRose.roses.get(0).sell_in, is(3));
+    assertThat(gildedRose.roses.get(0).sellIn, is(3));
   }
 
   @Test
@@ -121,7 +121,7 @@ public class GildedRoseTest {
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
     assertEquals("Sulfuras, Hand of Ragnaros", gildedRose.roses.get(0).name);
-    assertThat(gildedRose.roses.get(0).sell_in, is(3));
+    assertThat(gildedRose.roses.get(0).sellIn, is(3));
   }
 
   @Test

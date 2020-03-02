@@ -29,13 +29,13 @@ class GildedRose {
   private Rose createRose(Rose rose) {
     switch (rose.name) {
       case SULFURAS_ROSE:
-        return new SulfurasRose(rose.name, rose.sell_in, rose.quality);
+        return new SulfurasRose(rose.name, rose.sellIn, rose.quality);
       case AGED_BRIE_ROSE:
-        return new AgedBrieRose(rose.name, rose.sell_in, rose.quality);
+        return new AgedBrieRose(rose.name, rose.sellIn, rose.quality);
       case BACKSTAGE_PASSES_ROSE:
-        return new BackstagePassesRose(rose.name, rose.sell_in, rose.quality);
+        return new BackstagePassesRose(rose.name, rose.sellIn, rose.quality);
       default:
-        return new Rose(rose.name, rose.sell_in, rose.quality);
+        return new Rose(rose.name, rose.sellIn, rose.quality);
     }
   }
 }
