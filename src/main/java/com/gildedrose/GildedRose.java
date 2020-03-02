@@ -6,68 +6,68 @@ class GildedRose {
   private static final String BACKSTAGE_PASSES_ROSE = "Backstage passes to a TAFKAL80ETC concert";
   private static final String SULFURAS_ROSE = "Sulfuras, Hand of Ragnaros";
 
-  public Item[] items;
+  public Rose[] roses;
 
-  public GildedRose(Item[] items) {
-    this.items = items;
+  public GildedRose(Rose[] roses) {
+    this.roses = roses;
   }
 
   public void update_quality() {
-    for (Item item : items) {
-      updateSellIn(item);
-      updateQuality(item);
+    for (Rose rose : roses) {
+      updateSellIn(rose);
+      updateQuality(rose);
     }
   }
 
-  private void updateQuality(Item item) {
-    switch (item.name) {
+  private void updateQuality(Rose rose) {
+    switch (rose.name) {
       case SULFURAS_ROSE:
         return;
       case AGED_BRIE_ROSE:
-        if (item.sell_in < 0 && item.quality < 50) {
-          item.quality = item.quality + 1;
+        if (rose.sell_in < 0 && rose.quality < 50) {
+          rose.quality = rose.quality + 1;
         }
-        if (item.quality < 50) {
-          item.quality = item.quality + 1;
+        if (rose.quality < 50) {
+          rose.quality = rose.quality + 1;
         }
         return;
       case BACKSTAGE_PASSES_ROSE:
-        if (item.quality < 50) {
-          item.quality = item.quality + 1;
+        if (rose.quality < 50) {
+          rose.quality = rose.quality + 1;
         }
-        updateBackstageRoseQuality(item);
+        updateBackstageRoseQuality(rose);
         return;
       default:
-        if (item.quality > 0) {
-          item.quality = item.quality - 1;
-          if (item.sell_in < 0) {
-            item.quality = item.quality - 1;
+        if (rose.quality > 0) {
+          rose.quality = rose.quality - 1;
+          if (rose.sell_in < 0) {
+            rose.quality = rose.quality - 1;
           }
         }
     }
   }
 
-  private void updateBackstageRoseQuality(Item item) {
-    if (item.sell_in < 6) {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1;
+  private void updateBackstageRoseQuality(Rose rose) {
+    if (rose.sell_in < 6) {
+      if (rose.quality < 50) {
+        rose.quality = rose.quality + 1;
       }
     }
 
-    if (item.sell_in < 11) {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1;
+    if (rose.sell_in < 11) {
+      if (rose.quality < 50) {
+        rose.quality = rose.quality + 1;
       }
     }
 
-    if (item.sell_in < 0) {
-      item.quality = 0;
+    if (rose.sell_in < 0) {
+      rose.quality = 0;
     }
   }
 
-  private void updateSellIn(Item item) {
-    if (!item.name.equals(SULFURAS_ROSE)) {
-      item.sell_in = item.sell_in - 1;
+  private void updateSellIn(Rose rose) {
+    if (!rose.name.equals(SULFURAS_ROSE)) {
+      rose.sell_in = rose.sell_in - 1;
     }
   }
 }
