@@ -13,8 +13,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("rose", 2, 2)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("rose", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(1));
+    assertEquals("rose", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(1));
   }
 
   @Test
@@ -22,8 +22,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("rose", 0, 5)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("rose", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(3));
+    assertEquals("rose", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(3));
   }
 
   @Test
@@ -31,8 +31,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Aged Brie", 2, 49)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Aged Brie", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Aged Brie", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -40,8 +40,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Aged Brie", 2, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Aged Brie", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Aged Brie", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -49,8 +49,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 10, 4)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(6));
+    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(6));
   }
 
   @Test
@@ -58,8 +58,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 5, 4)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(7));
+    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(7));
   }
 
   @Test
@@ -67,8 +67,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 10, 49)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -76,8 +76,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 5, 48)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Backstage passes to a TAFKAL80ETC concert", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -85,8 +85,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Sulfuras, Hand of Ragnaros", -2, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Sulfuras, Hand of Ragnaros", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Sulfuras, Hand of Ragnaros", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -94,8 +94,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("rose", 4, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("rose", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].sell_in, is(3));
+    assertEquals("rose", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).sell_in, is(3));
   }
 
   @Test
@@ -103,7 +103,7 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", 4, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertThat(gildedRose.roses[0].sell_in, is(3));
+    assertThat(gildedRose.roses.get(0).sell_in, is(3));
   }
 
   @Test
@@ -111,8 +111,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Aged Brie", 4, 49)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Aged Brie", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].sell_in, is(3));
+    assertEquals("Aged Brie", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).sell_in, is(3));
   }
 
   @Test
@@ -120,8 +120,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Sulfuras, Hand of Ragnaros", 3, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Sulfuras, Hand of Ragnaros", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].sell_in, is(3));
+    assertEquals("Sulfuras, Hand of Ragnaros", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).sell_in, is(3));
   }
 
   @Test
@@ -129,8 +129,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Aged Brie", -1, 47)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Aged Brie", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(49));
+    assertEquals("Aged Brie", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(49));
   }
 
   @Test
@@ -138,8 +138,8 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Aged Brie", -1, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertEquals("Aged Brie", gildedRose.roses[0].name);
-    assertThat(gildedRose.roses[0].quality, is(50));
+    assertEquals("Aged Brie", gildedRose.roses.get(0).name);
+    assertThat(gildedRose.roses.get(0).quality, is(50));
   }
 
   @Test
@@ -147,7 +147,7 @@ public class GildedRoseTest {
     Rose[] roses = new Rose[]{new Rose("Backstage passes to a TAFKAL80ETC concert", -1, 50)};
     GildedRose gildedRose = new GildedRose(roses);
     gildedRose.update_quality();
-    assertThat(gildedRose.roses[0].quality, is(0));
+    assertThat(gildedRose.roses.get(0).quality, is(0));
   }
 
 }
